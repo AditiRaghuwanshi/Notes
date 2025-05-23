@@ -59,7 +59,7 @@
 
 //   const getUserInfo = async () => {
 //     try {
-//       const response = await axiosInstance.get("/userdetails");
+//       const response = await axiosInstance.get("/api/user/userdetails");
 //       console.log("API RESPONSE:", response);
 //       if (response.data && response.data.user) {
 //         console.log("Setting userInfo:", response.data.user);
@@ -78,7 +78,7 @@
 
 //   const getAllNotes = async () => {
 //     try {
-//       const response = await axiosInstance.get("/allnotes");
+//       const response = await axiosInstance.get("		/api/user/allnotes");
 //       if (response.data && response.data.notes) {
 //         setAllNotes(response.data.notes);
 //       }
@@ -90,7 +90,7 @@
 
 //   const deleteNote = async (data) => {
 //     const noteId = data._id;
-//     const response = await axiosInstance.delete("/deletenote/" + noteId);
+//     const response = await axiosInstance.delete("		/api/user/deletenote/" + noteId);
 //     try {
 //       if (response.data && !response.data.error) {
 //         showToastMessage("Note Deleted Successfully", "delete");
@@ -115,7 +115,7 @@
 
 //   const onSearchNote = async(query) => {
 //     try{
-//       const response = await axiosInstance.get("/search", {
+//       const response = await axiosInstance.get("		/api/user/search", {
 //         params: {query},
 //       });
 //       if(response.data && response.data.notes) {
@@ -135,7 +135,7 @@
 // const updateIsPinned = async (noteData) => {
 //   const noteId = noteData._id;
 //   try {
-//     const response = await axiosInstance.put(`/pinnednote/${noteId}`, {
+//     const response = await axiosInstance.put(`		/api/user/pinnednote/${noteId}`, {
 //       isPinned: !noteData.isPinned,  // <--- correct object here
 //     });
 
@@ -326,7 +326,7 @@ const Home = () => {
 
   const getUserInfo = async () => {
     try {
-      const response = await axiosInstance.get("/userdetails");
+      const response = await axiosInstance.get("/api/user/userdetails");
       console.log("API RESPONSE:", response);
       if (response.data && response.data.user) {
         console.log("Setting userInfo:", response.data.user);
@@ -345,7 +345,7 @@ const Home = () => {
 
   const getAllNotes = async () => {
     try {
-      const response = await axiosInstance.get("/allnotes");
+      const response = await axiosInstance.get("		/api/user/allnotes");
       if (response.data && response.data.notes) {
         setAllNotes(response.data.notes);
       }
@@ -357,7 +357,7 @@ const Home = () => {
 
   const deleteNote = async (data) => {
     const noteId = data._id;
-    const response = await axiosInstance.delete("/deletenote/" + noteId);
+    const response = await axiosInstance.delete("		/api/user/deletenote/" + noteId);
     try {
       if (response.data && !response.data.error) {
         showToastMessage("Note Deleted Successfully", "delete");
@@ -382,7 +382,7 @@ const Home = () => {
 
   const onSearchNote = async (query) => {
     try {
-      const response = await axiosInstance.get("/search", {
+      const response = await axiosInstance.get("		/api/user/search", {
         params: { query },
       });
       if (response.data && response.data.notes) {
@@ -402,7 +402,7 @@ const Home = () => {
   const updateIsPinned = async (noteData) => {
     const noteId = noteData._id;
     try {
-      const response = await axiosInstance.put(`/pinnednote/${noteId}`, {
+      const response = await axiosInstance.put(`		/api/user/pinnednote/${noteId}`, {
         isPinned: !noteData.isPinned,  // <--- correct object here
       });
 

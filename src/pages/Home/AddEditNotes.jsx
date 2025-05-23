@@ -11,7 +11,7 @@ const AddEditNotes = ({ noteData = {}, type, getAllNotes, OnClose, showToastMess
 
   const addNewNote = async () => {
     try {
-      const response = await axiosInstance.post("/addnote", {
+      const response = await axiosInstance.post("/api/user/addnote", {
         title,
         content,
         tags,
@@ -32,7 +32,7 @@ const AddEditNotes = ({ noteData = {}, type, getAllNotes, OnClose, showToastMess
     const noteId = noteData._id;
 
     try {
-      const response = await axiosInstance.put("/editnote/" + noteId, {
+      const response = await axiosInstance.put("api/user/editnote/" + noteId, {
         title,
         content,
         tags,
