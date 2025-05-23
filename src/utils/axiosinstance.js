@@ -7,7 +7,7 @@ import { BASE_URL } from "./constant";
 
 
 const axiosInstance = axios.create({
-    baseURL: BASE_URL,
+    	VITE_SERVER_URL: BASE_URL,
     // timeout: 10000,
     headers: {
         "Content-Type": "application/json",
