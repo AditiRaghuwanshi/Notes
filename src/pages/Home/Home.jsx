@@ -164,7 +164,7 @@ const updateIsPinned = async (noteData) => {
 
       <div className="container mx-auto">
         {allNotes.length > 0 ? (
-          <div className="grid grid-cols-3 gap-4 mt-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-3">
 
             {allNotes.map((item, index) => (
               <NoteCard
@@ -227,7 +227,7 @@ const updateIsPinned = async (noteData) => {
 
         }}
         contentLabel=""
-        className=" w-[40%] max-h-3/4 bg-white  rounded-md mx-auto mt-24 p-5 overflow-scroll"
+        className=" w-[85%] md:w-[35%] max-h-3/4 bg-white  rounded-md mx-auto mt-24 p-5 overflow-scroll "
       >
         <AddEditNotes
           type={openAddEditModal.type}

@@ -49,7 +49,7 @@ import moment from "moment";
 
 const NoteCard = ({ title, date, content, tags, isPinned, onEdit, onDelete, onPinNote }) => {
   return (
-    <div className="w-full sm:w-[90%] md:w-[80%] lg:w-full mx-auto mt-6  rounded p-4 bg-white hover:shadow-xl transition-all ease-in-out border border-blue-300">
+    <div className="w-[80%] sm:w-[90%] md:w-[80%] lg:w-full mx-auto mt-6  rounded p-4 bg-white hover:shadow-xl transition-all ease-in-out border border-blue-300">
       
       {/* Header with title and pin */}
       <div className="flex items-start justify-between mb-2">
