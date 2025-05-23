@@ -27,6 +27,8 @@ const Login = () => {
   setError(null);
 
   try {
+    console.log("URL being called:", `${import.meta.env.VITE_SERVER_URL}/api/user/login`);
+
     const response = await axiosInstance.post("/api/user/login", {
       Email: Email,
       Password: Password,

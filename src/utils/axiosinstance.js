@@ -47,6 +47,8 @@
 import axios from "axios";
 
 export const BASE_URL = import.meta.env.VITE_SERVER_URL;
+console.log("VITE_SERVER_URL:", import.meta.env.VITE_SERVER_URL); // should NOT be undefined
+
 
 console.log("Base URL is", BASE_URL); // ✅ for debugging
 
