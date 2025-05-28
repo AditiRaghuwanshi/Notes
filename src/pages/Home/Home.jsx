@@ -214,7 +214,7 @@ const updateIsPinned = async (noteData) => {
         <MdAdd className="text-[32px] text-white" />
 
       </button>
-      <Modal
+      {/* <Modal
         isOpen={openAddEditModal.isShown}
 
 
@@ -227,8 +227,21 @@ const updateIsPinned = async (noteData) => {
 
         }}
         contentLabel=""
-        className=" w-[85%] md:w-[35%] max-h-3/4 bg-white  rounded-md mx-auto mt-24 p-5 overflow-scroll "
-      >
+        className=" w-[85%] md:w-[35%] max-h-3/4 bg-white  rounded-md mx-auto mt-24 p-5 overflow-auto"
+      > */}
+
+
+      <Modal
+  isOpen={openAddEditModal.isShown}
+  style={{
+    overlay: {
+      backgroundColor: "rgba(0,0,0,0.2)",
+    },
+  }}
+  contentLabel=""
+  className="w-[85%] md:w-[35%] max-h-[80vh] bg-white rounded-md mx-auto mt-24 p-5 overflow-y-auto"
+>
+
         <AddEditNotes
           type={openAddEditModal.type}
           noteData={openAddEditModal.data}
